@@ -445,6 +445,7 @@ cassandra-stress user profile=./txn_by_cc_stress.yaml ops\(dailytrans=1\) -node 
 
 The default dashboard is available in this repo under [Banana](https://github.com/carolinerg1/FraudPrevention/tree/master/banana). You will need to replace default.json under "/usr/share/dse/banana/src/app/dashboards"
 
+
 ##Code Sample
 
 A full code example with inserts and queries can be found here - https://github.com/carolinerg1/FraudPrevention
