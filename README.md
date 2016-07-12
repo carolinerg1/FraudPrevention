@@ -17,7 +17,7 @@ The client wants a REST API to return:
 Performance SLAs:
 - The client wants assurance that his data model can handle 1,000 transactions a sec with stable latencies. The client currently handles accounts for over 15000 merchants and hoping to grow to 50,000 in a year.
 
-![alt text] (https://raw.githubusercontent.com/kunalak/RTFAP/master/img.png)
+![alt text] (https://raw.githubusercontent.com/carolinerg1/FraudPrevention/master/img.png)
 
 ##Setup
 DataStax Enterprise supplies built-in enterprise search functionality on Cassandra data that scales and performs in a way that meets the search requirements of modern Internet Enterprise applications. Using this search functionality will allow the volume of transactions to grow without a loss in performance. DSE Search also allows for live indexing for improved index throughput and reduced reader latency. More details about live indexing can be found here -  http://docs.datastax.com/en/datastax_enterprise/4.8/datastax_enterprise/srch/srchConfIncrIndexThruPut.html
@@ -369,7 +369,7 @@ Cary to update here
 
 Running a cassandra-stress test with the appropriate YAML profile for the table helps show how DSE will perform in terms of latency and throughput for writes and reads to/from the system.
 
-The stress YAML files are uploaded to this [directory](https://github.com/kunalak/RTFAP/tree/master/stress%20yamls).
+The stress YAML files are uploaded to this [directory](https://github.com/carolinerg1/FraudPrevention/tree/master/stress%20yamls).
 
 The YAML tries to mirror real data, for example: month is a value between 1 and 12, year is between 2010 and 2016, credit card number is 16 characters in length, etc
 
@@ -377,7 +377,7 @@ You can read more about stress testing a data model here
 http://www.datastax.com/dev/blog/improved-cassandra-2-1-stress-tool-benchmark-any-schema
 http://docs.datastax.com/en/cassandra/2.1/cassandra/tools/toolsCStress_t.html
 
-An example of running the stress tool is below using [txn_by_cc_stress.yaml](https://github.com/kunalak/RTFAP/blob/master/stress%20yamls/txn_by_cc_stress.yaml):
+An example of running the stress tool is below using [txn_by_cc_stress.yaml](https://github.com/carolinerg1/FraudPrevention/blob/master/stress%20yamls/txn_by_cc_stress.yaml):
 
 For inserts
 ```
@@ -439,15 +439,15 @@ cassandra-stress user profile=./txn_by_cc_stress.yaml ops\(dailytrans=1\) -node 
 
 ##Visual Dashboard
 
-![alt dashboard](https://github.com/kunalak/RTFAP/blob/master/banana/TransactionDashboard.png)
+![alt dashboard](https://github.com/carolinerg1/FraudPrevention/blob/master/banana/TransactionDashboard.png)
 
 [Dashboard](http://104.42.109.110:8983/banana/#/dashboard) was done using Banana. Follow this [guide](https://medium.com/@carolinerg/visualizing-cassandra-solr-data-with-banana-b54bf9dd24c#.nqzr0may3) to set it up.
 
-The default dashboard is available in this repo under [Banana](https://github.com/kunalak/RTFAP/tree/master/banana). You will need to replace default.json under "/usr/share/dse/banana/src/app/dashboards"
+The default dashboard is available in this repo under [Banana](https://github.com/carolinerg1/FraudPrevention/tree/master/banana). You will need to replace default.json under "/usr/share/dse/banana/src/app/dashboards"
 
 ##Code Sample
 
-A full code example with inserts and queries can be found here - https://github.com/kunalak/rtfap
+A full code example with inserts and queries can be found here - https://github.com/carolinerg1/FraudPrevention
 
 Please follow the instructions to download and populate your cluster with example data. This example also shows how to provide access to the data through a JSON rest web service.
 
